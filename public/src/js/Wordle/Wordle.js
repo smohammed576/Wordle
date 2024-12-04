@@ -100,7 +100,9 @@ class Wordle{
                         this.addClass(this.getInputs[i], this.wordArray[i], "green");
                     }
                 }
-                this.guessed(true, score);
+                setTimeout(() => {
+                    this.guessed(true, score);
+                }, 2200);
             }
             else{
                 for(let i = 0; i < 5; i++){
@@ -126,7 +128,7 @@ class Wordle{
                     setTimeout(() => {
                         let score = 6;
                         this.guessed(false, score);
-                    }, 4400);
+                    }, 2200);
                 }
                 this.wordArray = [];
                 this.index = 0;
@@ -146,11 +148,11 @@ class Wordle{
         if(boolean == true){
             this.win = 1;
             this.rowIndex = 6;
-            
+            this.gotword(true);
         }
         else{
             this.rowIndex = 6;
-            alert("the word was " + this.word);
+            this.gotword(false);
         }
         console.log(score);
         this.score = 0;
@@ -186,10 +188,48 @@ class Wordle{
                 break;
         }
         let url = "update.php?name="+this.name+"&password="+this.password+"&score="+this.score+"&win="+this.win+"&guess="+this.guess;
-        console.log(this.win);
         fetch(url)
         .then((response) => {
         });
+    }
+    gotword(boolean){
+        this.modal = document.createElement("div");
+        this.modal.classList.add("modal");
+        this.wordle.appendChild(this.modal);
+
+        this.modalTitle = document.createElement("h3");
+        this.modalTitle.classList.add("modal__title");
+        if(boolean == true){
+            this.modalTitle.innerText = "You won"
+        }
+        else{
+            this.modalTitle.innerText = "The word was "+this.word;
+        }
+        this.modal.appendChild(this.modalTitle);
+
+        this.buttons = document.createElement("span");
+        this.buttons.classList.add("modal__buttons");
+        this.modal.appendChild(this.buttons);
+
+        this.refresh = document.createElement("button");
+        this.refresh.classList.add("modal__buttons--refresh");
+        this.buttons.appendChild(this.refresh);
+
+        this.refreshLink = document.createElement("a");
+        this.refreshLink.classList.add("modal__buttons--refresh-link");
+        this.refreshLink.setAttribute("href", "http://localhost/wordletest/Wordle/public/");
+        this.refreshLink.innerText = "Play as other";
+        this.refresh.appendChild(this.refreshLink);
+
+        this.replay = document.createElement("button");
+        this.replay.classList.add("modal__buttons--replay");
+        this.replay.innerText = "Play again";
+        this.replay.onclick = () => {
+            this.main.remove();
+            console.log(this.name, this.password);
+            this.newWordle = new Wordle(this.name, this.password);
+        }
+        this.buttons.appendChild(this.replay);
     }
 }
 

@@ -34,7 +34,7 @@ class User{
         
         this.joined = document.createElement("p");
         this.joined.classList.add("user__profile--joined");
-        this.joined.innerText = "joined on " + this.data.created_at;
+        this.joined.innerText = "joined on " + new Date(this.data.created_at.slice(0, 10)).toLocaleDateString('default', {day: 'numeric', month: 'short', year: 'numeric'});
         this.profile.appendChild(this.joined);
 
         this.info = document.createElement("div");
@@ -58,7 +58,7 @@ class User{
         for(let i = 0; i < data.guesses.length; i++){
             this.guess = document.createElement("article");
             this.guess.classList.add("user__guesses--guess");
-            this.guess.innerText = i;
+            this.guess.innerText = i + 1;
             this.guessWrapper.appendChild(this.guess);
 
             this.height = "";

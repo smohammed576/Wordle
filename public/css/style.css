@@ -193,6 +193,7 @@ body {
   flex-direction: column;
   gap: 0.4rem;
   width: 50rem;
+  position: relative;
 }
 .wordle__row {
   display: flex;
@@ -375,6 +376,55 @@ body {
 }
 .keyboard__key--black {
   background: black;
+}
+
+.modal {
+  background: #DCD6F7;
+  width: 80%;
+  height: 40rem;
+  position: absolute;
+  top: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0rem 0.2rem 1rem 0.1rem rgba(0, 0, 0, 0.3);
+}
+.modal__title {
+  font-size: 180%;
+}
+.modal__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.modal__buttons--refresh {
+  font-size: 100%;
+  border: 0.2rem solid black;
+  padding: 1.4rem 2rem;
+  border-radius: 10rem;
+  background: none;
+  transition: 0.2s all;
+}
+.modal__buttons--refresh:hover {
+  cursor: pointer;
+}
+.modal__buttons--refresh-link {
+  color: black;
+  text-decoration: none;
+}
+.modal__buttons--replay {
+  background: black;
+  border: 0.2rem solid black;
+  font-size: 100%;
+  padding: 1.4rem 2rem;
+  border-radius: 10rem;
+  transition: 0.2s all;
+  color: white;
+}
+.modal__buttons--replay:hover {
+  cursor: pointer;
 }
 
 .scoreboard {
@@ -617,6 +667,15 @@ body {
 }
 .darkmode .user__stats--stat {
   background: rgba(13, 0, 13, 0.2);
+}
+.darkmode .modal {
+  background: rgb(5, 0, 10);
+}
+.darkmode .modal__buttons--refresh {
+  border-color: white;
+}
+.darkmode .modal__buttons--replay {
+  border-color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

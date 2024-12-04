@@ -9,6 +9,7 @@ $colors: green, yellow, grey, purple, red, black;
     flex-direction: column;
     gap: 0.4rem;
     width: 50rem;
+    position: relative;
 
     &__row{
         @include mixins.flexBox;

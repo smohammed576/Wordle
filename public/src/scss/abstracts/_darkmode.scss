@@ -23,4 +23,14 @@
     & .user__stats--stat{
         background: rgba(map-get(variables.$darkmode, "statsBackground"), 0.2);
     }
+    & .modal{
+        background: map-get(variables.$darkmode, "background");
+
+        &__buttons--refresh{
+            border-color: map-get(variables.$baseVars, "second");
+        }
+        &__buttons--replay{
+            border-color: map-get(variables.$baseVars, "color");
+        }
+    }
 }
