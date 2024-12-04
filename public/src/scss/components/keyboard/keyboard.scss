@@ -1,0 +1,30 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+$colors: grey, yellow, green, purple, red, black;
+
+.keyboard{
+    width: 100%;
+    height: 100%;
+    @include mixins.flexBox;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding: 0.1rem;
+
+    &__key{
+        width: 4.5rem;
+        height: 6rem;
+        font-size: 110%;
+        background: map-get(variables.$keyboardVars, "key");
+        border: none;
+        border-radius: 0.2rem;
+        color: map-get(variables.$baseVars, "second");
+        font-weight: 600;
+
+        @each $color in $colors{
+            &--#{$color}{
+                background: map-get(variables.$wordleVars, #{$color});
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+@use "../../abstracts/animations";
+
+$colors: green, yellow, grey, purple, red, black;
+
+.wordle{
+    @include mixins.flexBox;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 50rem;
+
+    &__row{
+        @include mixins.flexBox;
+        gap: 0.4rem;
+        width: 100%;
+
+        &--input{
+            border: 0.1rem solid rgba(map-get(variables.$baseVars, "color"), 0.4);
+            width: 14%;
+            aspect-ratio: 1/1;
+            @include mixins.flexBox;
+            font-size: 180%;
+            text-transform: capitalize;
+            font-weight: 600;
+
+            &-entered{
+                border: 0.1rem solid rgba(map-get(variables.$baseVars, "color"), 0.8);
+                @include animations.entered;
+            }
+
+            &-green{
+                @include animations.green;
+            }
+            &-yellow{
+                @include animations.yellow;
+            }
+            &-grey{
+                @include animations.grey;
+            }
+            &-purple{
+                @include animations.purple;
+            }
+            &-red{
+                @include animations.red;
+            }
+            &-black{
+                @include animations.black;
+            }
+
+            @each $color in $colors{
+                &-#{$color}{
+                    @for $i from 1 through 5{
+                        &:nth-of-type(#{$i}){
+                            animation-delay: $i / 4.5 + s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

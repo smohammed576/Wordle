@@ -1,0 +1,33 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.header{
+    width: 100%;
+    padding: 1rem 2rem;
+    @include mixins.flexBox;
+
+    &__navigation{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--logo{
+            text-decoration: none;
+            color: map-get(variables.$baseVars, "color");
+            font-weight: 600;
+            font-size: 120%;
+        }
+
+        &--wrapper{
+            @include mixins.flexBox;
+            gap: 2rem;
+        }
+        
+        &--button{
+            background: none;
+            border: none;
+            font-size: 100%;
+        }
+    }
+}

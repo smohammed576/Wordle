@@ -1,0 +1,575 @@
+{
+    "form": [
+        {
+            "name": "name",
+            "type": "text",
+            "placeholder": "enter ur name"
+        },
+        {
+            "name": "image",
+            "type": "text",
+            "placeholder": "insert a url"
+        },
+        {
+            "name": "password",
+            "type": "text",
+            "placeholder": "fake password, NOT A REAL ONE!!!"
+        }
+    ],
+    "userss": [
+        {
+            "idUsers": 1,
+            "name": "viue",
+            "image": "buoih",
+            "password": "buoi",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 2,
+            "name": "Vinnie",
+            "image": "buoih",
+            "password": "buoi",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 3,
+            "name": "rio",
+            "image": "https://i.pinimg.com/736x/3c/ea/e3/3ceae31e5e009313b5e2b064c785cce7.jpg",
+            "password": "agathrio",
+            "score": 348,
+            "plays": 0
+        },
+        {
+            "idUsers": 4,
+            "name": "ariana",
+            "image": "https://i.pinimg.com/736x/92/36/d7/9236d78665b1f12b8f76900716d78dd3.jpg",
+            "password": "imagine",
+            "score": 168,
+            "plays": 23
+        },
+        {
+            "idUsers": 5,
+            "name": "imagine",
+            "image": "imagine",
+            "password": "imagine",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 6,
+            "name": "vygu",
+            "image": "vyigu",
+            "password": "viuo",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 7,
+            "name": "gui",
+            "image": "yvgiu",
+            "password": "yguh",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 8,
+            "name": "yugi",
+            "image": "viu",
+            "password": "viu",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 9,
+            "name": "cgvy",
+            "image": "yugiu",
+            "password": "ygui",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 10,
+            "name": "yu",
+            "image": "yiguo",
+            "password": "viugo",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 11,
+            "name": "uh",
+            "image": "buhi",
+            "password": "ubhi",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 12,
+            "name": "yuvi",
+            "image": "iuho",
+            "password": "ohij",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 13,
+            "name": "april",
+            "image": "story",
+            "password": "teen",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 14,
+            "name": "april",
+            "image": "story",
+            "password": "teen",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 15,
+            "name": "UGH",
+            "image": "ugh",
+            "password": "ugh",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 16,
+            "name": "name",
+            "image": "name",
+            "password": "name",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 17,
+            "name": "lana",
+            "image": "lana",
+            "password": "lana",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 18,
+            "name": "agatha",
+            "image": "agatha",
+            "password": "agatha",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 19,
+            "name": "agatha",
+            "image": "agatha",
+            "password": "agatha",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 20,
+            "name": "ayugdw",
+            "image": "yvguih",
+            "password": "u",
+            "score": 0,
+            "plays": 0
+        },
+        {
+            "idUsers": 21,
+            "name": "YUH",
+            "image": "YUH",
+            "password": "YUH",
+            "score": 0,
+            "plays": 1
+        },
+        {
+            "idUsers": 22,
+            "name": "cheese",
+            "image": "https://i.pinimg.com/736x/16/c2/be/16c2be27a8987e37fd2904e575dad12f.jpg",
+            "password": "cheese",
+            "score": 1,
+            "plays": 1
+        }
+    ],
+    "wordlist": [
+        {
+            "word": "witch"
+        },
+        {
+            "word": "about"
+        },
+        {
+            "word": "coven"
+        },
+        {
+            "word": "raven"
+        },
+        {
+            "word": "coven"
+        },
+        {
+            "word": "being"
+        },
+        {
+            "word": "going"
+        },
+        {
+            "word": "mouse"
+        },
+        {
+            "word": "spell"
+        },
+        {
+            "word": "drive"
+        },
+        {
+            "word": "water"
+        },
+        {
+            "word": "earth"
+        },
+        {
+            "word": "party"
+        },
+        {
+            "word": "along"
+        },
+        {
+            "word": "night"
+        },
+        {
+            "word": "prime"
+        },
+        {
+            "word": "group"
+        },
+        {
+            "word": "fresh"
+        },
+        {
+            "word": "least"
+        },
+        {
+            "word": "roast"
+        },
+        {
+            "word": "death"
+        },
+        {
+            "word": "house"
+        },
+        {
+            "word": "biker"
+        },
+        {
+            "word": "among"
+        },
+        {
+            "word": "truth"
+        },
+        {
+            "word": "saint"
+        },
+        {
+            "word": "saine"
+        },
+        {
+            "word": "waist"
+        },
+        {
+            "word": "proud"
+        },
+        {
+            "word": "guest"
+        },
+        {
+            "word": "roach"
+        },
+        {
+            "word": "match"
+        },
+        {
+            "word": "crone"
+        },
+        {
+            "word": "might"
+        },
+        {
+            "word": "right"
+        },
+        {
+            "word": "aside"
+        },
+        {
+            "word": "plaza"
+        },
+        {
+            "word": "satan"
+        }
+    ],
+    "letters": [
+        {
+            "letter": "Q"
+        },
+        {
+            "letter": "W"
+        },
+        {
+            "letter": "E"
+        },
+        {
+            "letter": "R"
+        },
+        {
+            "letter": "T"
+        },
+        {
+            "letter": "Y"
+        },
+        {
+            "letter": "U"
+        },
+        {
+            "letter": "I"
+        },
+        {
+            "letter": "O"
+        },
+        {
+            "letter": "P"
+        },
+        {
+            "letter": "A"
+        },
+        {
+            "letter": "S"
+        },
+        {
+            "letter": "D"
+        },
+        {
+            "letter": "F"
+        },
+        {
+            "letter": "G"
+        },
+        {
+            "letter": "H"
+        },
+        {
+            "letter": "J"
+        },
+        {
+            "letter": "K"
+        },
+        {
+            "letter": "L"
+        },
+        {
+            "letter": "Z"
+        },
+        {
+            "letter": "X"
+        },
+        {
+            "letter": "C"
+        },
+        {
+            "letter": "V"
+        },
+        {
+            "letter": "B"
+        },
+        {
+            "letter": "N"
+        },
+        {
+            "letter": "M"
+        }
+    ],
+    "guesses": [
+        {
+            "guess": "one"
+        },
+        {
+            "guess": "two"
+        },
+        {
+            "guess": "three"
+        },
+        {
+            "guess": "four"
+        },
+        {
+            "guess": "five"
+        },
+        {
+            "guess": "six"
+        }
+    ],
+    "users": [
+        {
+            "idUsers": 1,
+            "name": "rio",
+            "image": "https://i.pinimg.com/736x/3c/ea/e3/3ceae31e5e009313b5e2b064c785cce7.jpg",
+            "password": "agathrio",
+            "score": 45,
+            "plays": 3,
+            "wins": 0,
+            "one": 0,
+            "two": 0,
+            "three": 0,
+            "four": 0,
+            "five": 0,
+            "six": 0,
+            "created_at": "2024-12-02 18:27:19"
+        },
+        {
+            "idUsers": 2,
+            "name": "young agatha",
+            "image": "https://i.pinimg.com/736x/42/53/84/425384b294cb02790cf568277f8bc7b8.jpg",
+            "password": "ughservingsm",
+            "score": 56,
+            "plays": 4,
+            "wins": 0,
+            "one": 0,
+            "two": 0,
+            "three": 0,
+            "four": 0,
+            "five": 0,
+            "six": 0,
+            "created_at": "2024-12-02 18:27:19"
+        },
+        {
+            "idUsers": 3,
+            "name": "agatha harkness",
+            "image": "https://i.pinimg.com/736x/30/03/48/300348f8d7c53ec10bfe1dbdd63bc456.jpg",
+            "password": "servingsomuchcuntomg",
+            "score": 50,
+            "plays": 3,
+            "wins": 0,
+            "one": 0,
+            "two": 0,
+            "three": 0,
+            "four": 0,
+            "five": 0,
+            "six": 0,
+            "created_at": "2024-12-02 18:27:19"
+        },
+        {
+            "idUsers": 4,
+            "name": "satan",
+            "image": "https://i.pinimg.com/736x/89/6e/0b/896e0beee1234327613f8329db808991.jpg",
+            "password": "miramiramira",
+            "score": 120,
+            "plays": 5,
+            "wins": 2,
+            "one": 0,
+            "two": 0,
+            "three": 1,
+            "four": 0,
+            "five": 0,
+            "six": 0,
+            "created_at": "2024-12-02 19:14:26"
+        },
+        {
+            "idUsers": 5,
+            "name": "janet snakehole",
+            "image": "https://i.pinimg.com/736x/a4/6d/5a/a46d5ae5dddc68995777800a77b116a1.jpg",
+            "password": "ohmagawd",
+            "score": 1,
+            "plays": 1,
+            "wins": 0,
+            "one": 0,
+            "two": 0,
+            "three": 0,
+            "four": 0,
+            "five": 0,
+            "six": 0,
+            "created_at": "2024-12-02 18:27:19"
+        },
+        {
+            "idUsers": 6,
+            "name": "ann perkins",
+            "image": "https://i.pinimg.com/736x/3c/fe/59/3cfe5940e5a6cc958f82a91753e360a3.jpg",
+            "password": "notajanitor",
+            "score": 1,
+            "plays": 2,
+            "wins": 0,
+            "one": 0,
+            "two": 0,
+            "three": 0,
+            "four": 0,
+            "five": 0,
+            "six": 0,
+            "created_at": "2024-12-02 19:20:17"
+        },
+        {
+            "idUsers": 7,
+            "name": "ben iceking",
+            "image": "https://i.pinimg.com/736x/e3/d4/36/e3d4369d83fad06716e7e066e02bfe13.jpg",
+            "password": "bababooey",
+            "score": 1,
+            "plays": 1,
+            "wins": 0,
+            "one": 0,
+            "two": 0,
+            "three": 0,
+            "four": 0,
+            "five": 0,
+            "six": 0,
+            "created_at": "2024-12-02 18:27:19"
+        },
+        {
+            "idUsers": 8,
+            "name": "burt macklin",
+            "image": "https://i.pinimg.com/736x/cf/27/21/cf2721778a2da32b22064f6cdc735f11.jpg",
+            "password": "fbi",
+            "score": 25,
+            "plays": 1,
+            "wins": 0,
+            "one": 0,
+            "two": 0,
+            "three": 0,
+            "four": 0,
+            "five": 0,
+            "six": 0,
+            "created_at": "2024-12-02 18:27:19"
+        },
+        {
+            "idUsers": 9,
+            "name": "lilia",
+            "image": "https://i.pinimg.com/736x/7a/40/f1/7a40f1489e4dbaef1d30167413b519a8.jpg",
+            "password": "thequeenofcups",
+            "score": 40,
+            "plays": 2,
+            "wins": 0,
+            "one": 0,
+            "two": 0,
+            "three": 0,
+            "four": 0,
+            "five": 0,
+            "six": 0,
+            "created_at": "2024-12-02 18:27:19"
+        },
+        {
+            "idUsers": 10,
+            "name": "mrs. hart",
+            "image": "https://i.pinimg.com/736x/5f/79/a6/5f79a626a097cd06611bd9361b3984c9.jpg",
+            "password": "itssharon",
+            "score": 101,
+            "plays": 7,
+            "wins": 7,
+            "one": 0,
+            "two": 0,
+            "three": 4,
+            "four": 2,
+            "five": 0,
+            "six": 1,
+            "created_at": "2024-12-02 19:45:38"
+        }
+    ]
+}

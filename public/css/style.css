@@ -1,0 +1,622 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background: #DCD6F7;
+  color: black;
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.header {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__navigation--logo {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 120%;
+}
+.header__navigation--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.header__navigation--button {
+  background: none;
+  border: none;
+  font-size: 100%;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+  height: 75vh;
+}
+.form__title {
+  font-size: 200%;
+  padding: 2rem;
+}
+.form__input {
+  background: none;
+  border: 0.1rem solid black;
+  padding: 1rem 2rem;
+  font-size: 100%;
+  width: 30%;
+}
+.form__input:nth-of-type(3) {
+  -webkit-text-security: disc;
+}
+.form__input:focus {
+  outline: none;
+}
+.form__submit {
+  border: none;
+  background: black;
+  color: #DCD6F7;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  width: 30%;
+  font-size: 100%;
+}
+.form__submit:focus {
+  outline: none;
+}
+
+@keyframes entered {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes green {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+    background: rgb(43, 98, 43);
+    color: white;
+    border: none;
+  }
+}
+@keyframes yellow {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+    background: rgb(201, 201, 25);
+    color: white;
+    border: none;
+  }
+}
+@keyframes grey {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+    background: rgb(128, 128, 128);
+    color: white;
+    border: none;
+  }
+}
+@keyframes purple {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+    background: rgb(27, 0, 27);
+    color: white;
+    border: none;
+  }
+}
+@keyframes red {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+    background: rgb(77, 5, 5);
+    color: white;
+    border: none;
+  }
+}
+@keyframes black {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+    background: black;
+    color: white;
+    border: none;
+  }
+}
+.wordle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 50rem;
+}
+.wordle__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+}
+.wordle__row--input {
+  border: 0.1rem solid rgba(0, 0, 0, 0.4);
+  width: 14%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 180%;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.wordle__row--input-entered {
+  border: 0.1rem solid rgba(0, 0, 0, 0.8);
+  animation-name: entered;
+  animation-duration: 0.3s;
+}
+.wordle__row--input-green {
+  animation-name: green;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+.wordle__row--input-yellow {
+  animation-name: yellow;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+.wordle__row--input-grey {
+  animation-name: grey;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+.wordle__row--input-purple {
+  animation-name: purple;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+.wordle__row--input-red {
+  animation-name: red;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+.wordle__row--input-black {
+  animation-name: black;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+.wordle__row--input-green:nth-of-type(1) {
+  animation-delay: 0.2222222222s;
+}
+.wordle__row--input-green:nth-of-type(2) {
+  animation-delay: 0.4444444444s;
+}
+.wordle__row--input-green:nth-of-type(3) {
+  animation-delay: 0.6666666667s;
+}
+.wordle__row--input-green:nth-of-type(4) {
+  animation-delay: 0.8888888889s;
+}
+.wordle__row--input-green:nth-of-type(5) {
+  animation-delay: 1.1111111111s;
+}
+.wordle__row--input-yellow:nth-of-type(1) {
+  animation-delay: 0.2222222222s;
+}
+.wordle__row--input-yellow:nth-of-type(2) {
+  animation-delay: 0.4444444444s;
+}
+.wordle__row--input-yellow:nth-of-type(3) {
+  animation-delay: 0.6666666667s;
+}
+.wordle__row--input-yellow:nth-of-type(4) {
+  animation-delay: 0.8888888889s;
+}
+.wordle__row--input-yellow:nth-of-type(5) {
+  animation-delay: 1.1111111111s;
+}
+.wordle__row--input-grey:nth-of-type(1) {
+  animation-delay: 0.2222222222s;
+}
+.wordle__row--input-grey:nth-of-type(2) {
+  animation-delay: 0.4444444444s;
+}
+.wordle__row--input-grey:nth-of-type(3) {
+  animation-delay: 0.6666666667s;
+}
+.wordle__row--input-grey:nth-of-type(4) {
+  animation-delay: 0.8888888889s;
+}
+.wordle__row--input-grey:nth-of-type(5) {
+  animation-delay: 1.1111111111s;
+}
+.wordle__row--input-purple:nth-of-type(1) {
+  animation-delay: 0.2222222222s;
+}
+.wordle__row--input-purple:nth-of-type(2) {
+  animation-delay: 0.4444444444s;
+}
+.wordle__row--input-purple:nth-of-type(3) {
+  animation-delay: 0.6666666667s;
+}
+.wordle__row--input-purple:nth-of-type(4) {
+  animation-delay: 0.8888888889s;
+}
+.wordle__row--input-purple:nth-of-type(5) {
+  animation-delay: 1.1111111111s;
+}
+.wordle__row--input-red:nth-of-type(1) {
+  animation-delay: 0.2222222222s;
+}
+.wordle__row--input-red:nth-of-type(2) {
+  animation-delay: 0.4444444444s;
+}
+.wordle__row--input-red:nth-of-type(3) {
+  animation-delay: 0.6666666667s;
+}
+.wordle__row--input-red:nth-of-type(4) {
+  animation-delay: 0.8888888889s;
+}
+.wordle__row--input-red:nth-of-type(5) {
+  animation-delay: 1.1111111111s;
+}
+.wordle__row--input-black:nth-of-type(1) {
+  animation-delay: 0.2222222222s;
+}
+.wordle__row--input-black:nth-of-type(2) {
+  animation-delay: 0.4444444444s;
+}
+.wordle__row--input-black:nth-of-type(3) {
+  animation-delay: 0.6666666667s;
+}
+.wordle__row--input-black:nth-of-type(4) {
+  animation-delay: 0.8888888889s;
+}
+.wordle__row--input-black:nth-of-type(5) {
+  animation-delay: 1.1111111111s;
+}
+
+.keyboard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  padding: 0.1rem;
+}
+.keyboard__key {
+  width: 4.5rem;
+  height: 6rem;
+  font-size: 110%;
+  background: rgb(182, 170, 170);
+  border: none;
+  border-radius: 0.2rem;
+  color: white;
+  font-weight: 600;
+}
+.keyboard__key--grey {
+  background: rgb(128, 128, 128);
+}
+.keyboard__key--yellow {
+  background: rgb(201, 201, 25);
+}
+.keyboard__key--green {
+  background: rgb(43, 98, 43);
+}
+.keyboard__key--purple {
+  background: rgb(27, 0, 27);
+}
+.keyboard__key--red {
+  background: rgb(77, 5, 5);
+}
+.keyboard__key--black {
+  background: black;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 20rem;
+  width: 90%;
+}
+.scoreboard__podium {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 2rem;
+  width: 100%;
+}
+.scoreboard__podium--user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.scoreboard__podium--user-image {
+  width: 22rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.8rem solid;
+}
+.scoreboard__podium--user-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.scoreboard__podium--user-name:hover {
+  cursor: pointer;
+}
+.scoreboard__podium--user-0 img {
+  width: 22rem;
+  border-color: rgb(8, 0, 22);
+}
+.scoreboard__podium--user-0 h2 {
+  font-size: 180%;
+}
+.scoreboard__podium--user-0 h3 {
+  font-size: 120%;
+}
+.scoreboard__podium--user-1 img {
+  width: 25rem;
+  border-color: rgb(20, 2, 16);
+}
+.scoreboard__podium--user-1 h2 {
+  font-size: 200%;
+}
+.scoreboard__podium--user-1 h3 {
+  font-size: 150%;
+}
+.scoreboard__podium--user-2 img {
+  width: 20rem;
+  border-color: silver;
+}
+.scoreboard__podium--user-2 h2 {
+  font-size: 150%;
+}
+.scoreboard__podium--user-2 h3 {
+  font-size: 110%;
+}
+.scoreboard__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.8rem;
+  list-style: none;
+  width: 100%;
+  padding: 0.2rem;
+  border-radius: 2rem;
+}
+.scoreboard__user {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 110%;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+.scoreboard__user--rank {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scoreboard__user--name {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
+}
+.scoreboard__user--name-image {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.scoreboard__user--name-link:hover {
+  cursor: pointer;
+}
+.scoreboard__user--score {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scoreboard__list--user {
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 600;
+}
+
+.user {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 85vh;
+}
+.user__profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 4rem;
+  height: 100%;
+  padding: 4rem 2rem;
+}
+.user__profile--image {
+  width: 30rem;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.user__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.user__stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 50%;
+}
+.user__stats--stat {
+  background: rgba(66, 72, 116, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+  aspect-ratio: 1/1;
+}
+.user__stats--stat-text {
+  font-size: 300%;
+  font-weight: 600;
+}
+.user__guesses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  height: 50%;
+  padding: 1rem;
+}
+.user__guesses--title {
+  width: 100%;
+  padding: 0 32rem;
+}
+.user__guesses--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0 0 0;
+}
+.user__guesses--guess {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: end;
+  align-items: center;
+  gap: 0.8rem;
+  width: 8rem;
+  height: 100%;
+  font-size: 90%;
+  font-weight: 600;
+}
+.user__guesses--guess-number {
+  background: rgb(43, 98, 43);
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 0.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.darkmode {
+  background: rgb(5, 0, 10);
+  color: rgb(255, 255, 255);
+}
+.darkmode a, .darkmode button {
+  color: rgb(255, 255, 255);
+}
+.darkmode input {
+  color: rgb(255, 255, 255);
+  border: 0.1rem solid rgba(255, 255, 255, 0.4);
+  background: #0a0014;
+}
+.darkmode .form__submit {
+  background: rgb(26, 16, 42);
+  border: none;
+}
+.darkmode .wordle__row--input {
+  border: 0.1rem solid rgba(255, 255, 255, 0.4);
+}
+.darkmode .user__stats--stat {
+  background: rgba(13, 0, 13, 0.2);
+}
+
+/*# sourceMappingURL=style.css.map */

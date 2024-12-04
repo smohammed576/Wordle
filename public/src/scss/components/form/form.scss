@@ -1,0 +1,46 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.form{
+    @include mixins.flexBox;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+    height: 75vh;
+
+    &__title{
+        font-size: 200%;
+        padding: 2rem;
+    }
+    
+    &__input{
+        background: none;
+        border: 0.1rem solid map-get(variables.$baseVars, "color");
+        padding: 1rem 2rem;
+        font-size: 100%;
+        width: 30%;
+
+        &:nth-of-type(3){
+            -webkit-text-security: disc;
+        }
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__submit{
+        border: none;
+        background: map-get(variables.$baseVars, "color");
+        color: map-get(variables.$baseVars, "background");
+        padding: 1rem 2rem;
+        border-radius: 0.4rem;
+        width: 30%;
+        font-size: 100%;
+
+        &:focus{
+            outline: none;
+        }
+    }
+}

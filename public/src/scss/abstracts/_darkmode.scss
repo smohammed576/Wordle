@@ -1,0 +1,26 @@
+@use "variables";
+
+.darkmode{
+    background: map-get(variables.$darkmode, "background");
+    color: map-get(variables.$darkmode, "color");
+
+    & a, button{
+        color: map-get(variables.$darkmode, "color");
+    }
+
+    & input{
+        color: map-get(variables.$darkmode, "color");
+        border: 0.1rem solid rgba(map-get(variables.$darkmode, "color"), 0.4);
+        background: lighten(map-get(variables.$darkmode, "background"), 2%);
+    }
+    & .form__submit{
+        background: map-get(variables.$darkmode, "submit");
+        border: none;
+    }
+    & .wordle__row--input{
+        border: 0.1rem solid rgba(map-get(variables.$darkmode, "color"), 0.4);
+    }
+    & .user__stats--stat{
+        background: rgba(map-get(variables.$darkmode, "statsBackground"), 0.2);
+    }
+}

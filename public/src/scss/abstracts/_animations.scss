@@ -1,0 +1,67 @@
+@use "variables";
+
+$colors: green, yellow, grey, purple, red, black;
+
+@keyframes entered{
+    from{
+        transform: scale(1.05);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@mixin entered{
+    animation-name: entered;
+    animation-duration: 0.3s;
+}
+
+@each $color in $colors{
+    @keyframes #{$color}{
+        0%{
+            transform: scaleY(1);
+        }
+        50%{
+            transform: scaleY(0);
+        }
+        100%{
+            transform: scaleY(1);
+            background: map-get(variables.$wordleVars, #{$color});
+            color: map-get(variables.$baseVars, "second");
+            border: none;
+            
+        }
+    }
+
+}
+
+@mixin green{
+    animation-name: green;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+@mixin yellow{
+    animation-name: yellow;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+@mixin grey{
+    animation-name: grey;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+@mixin purple{
+    animation-name: purple;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+@mixin red{
+    animation-name: red;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+@mixin black{
+    animation-name: black;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}

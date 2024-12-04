@@ -1,0 +1,96 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.user{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 85vh;
+
+    &__profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 4rem;
+        height: 100%;
+        padding: 4rem 2rem;
+
+        &--image{
+            width: 30rem;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+    }
+    &__info{
+        @include mixins.flexBox;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__stats{
+        @include mixins.flexBox;
+        gap: 2rem;
+        width: 100%;
+        height: 50%;
+
+        &--stat{
+            background: rgba(map-get(variables.$accentVars, "purple"), 0.2);
+            @include mixins.flexBox;
+            flex-direction: column;
+            width: 20%;
+            aspect-ratio: 1/1;
+
+            &-text{
+                font-size: 300%;
+                font-weight: 600;
+            }
+        }
+    }
+    &__guesses{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 100%;
+        height: 50%;
+        padding: 1rem;
+
+        &--title{
+            width: 100%;
+            padding: 0 32rem;
+        }
+
+        &--wrapper{
+            @include mixins.flexBox;
+            width: 100%;
+            height: 100%;
+            padding: 2rem 0 0 0;
+        }
+
+        &--guess{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: end;
+            align-items: center;
+            gap: 0.8rem;
+            width: 8rem;
+            height: 100%;
+            font-size: 90%;
+            font-weight: 600;
+
+            &-number{
+                background: map-get(variables.$wordleVars, "green");
+                width: 4rem;
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                padding: 0.2rem;
+                font-weight: 600;
+                color: map-get(variables.$baseVars, "second");
+            }
+        }
+    }
+}

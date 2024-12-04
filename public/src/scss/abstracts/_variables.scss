@@ -1,0 +1,36 @@
+$baseVars: (
+    "background":#DCD6F7,
+    "color": black,
+    "font": sans-serif,
+    "second": white
+);
+
+$accentVars: (
+    "purple": #424874
+);
+
+$darkmode: (
+    "background": rgb(5, 0, 10),
+    "color": rgb(255, 255, 255),
+    "statsBackground": rgb(13, 0, 13),
+    "submit": rgb(26, 16, 42)
+);
+
+$wordleVars: (
+    "green": rgb(43, 98, 43),
+    "yellow": rgb(201, 201, 25),
+    "grey": rgb(128, 128, 128),
+    "purple": rgb(27, 0, 27),
+    "red": rgb(77, 5, 5),
+    "black": black,
+);
+
+$leaderboardVars: (
+    "background": #646072,
+    "list": #424874
+);
+
+$keyboardVars: (
+    "background": grey,
+    "key": rgb(182, 170, 170)
+);

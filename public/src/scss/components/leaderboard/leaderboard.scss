@@ -1,0 +1,139 @@
+@use "../../abstracts/variables";
+@use "../../abstracts/mixins";
+
+.scoreboard{
+    @include mixins.flexBox;
+    flex-direction: column;
+    gap: 2rem;
+    // background: rgba(map-get(variables.$leaderboardVars, "background"), 0.3);
+    padding: 1rem 20rem;
+    width: 90%;
+
+    &__podium{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        gap: 2rem;
+        width: 100%;
+
+        &--user{
+            @include mixins.flexBox;
+            flex-direction: column;
+
+            &-image{
+                width: 22rem;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 0.8rem solid;
+            }
+            &-wrapper{
+                @include mixins.flexBox;
+                flex-direction: column;
+                padding: 1rem;
+            }
+            &-name{
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            &-0{
+                & img{
+                    width: 22rem;
+                    border-color: rgb(8, 0, 22);
+                }
+                & h2{
+                    font-size: 180%;
+                }
+                & h3{
+                    font-size: 120%;
+                }
+            }
+            &-1{
+                & img{
+                    width: 25rem;
+                    border-color: rgb(20, 2, 16);
+                }
+                & h2{
+                    font-size: 200%;
+                }
+                & h3{
+                    font-size: 150%;
+                }
+            }
+            &-2{
+                & img{
+                    width: 20rem;
+                    border-color: silver;
+                }
+                & h2{
+                    font-size: 150%;
+                }
+                & h3{
+                    font-size: 110%;
+                }
+            }
+        }
+   }
+
+   &__list{
+        @include mixins.flexBox;
+        flex-direction: column;
+        gap: 0.8rem;
+        list-style: none;
+        width: 100%;
+        padding: 0.2rem;
+        // background: rgba(map-get(variables.$leaderboardVars, "list"), 1);
+        border-radius: 2rem;
+   }
+   &__user{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // background: rgba(map-get(variables.$leaderboardVars, "background"), 0.4);
+        font-size: 110%;
+        border-radius: 1rem;
+        padding: 0.4rem;
+
+        &--rank{
+            width: 10%;
+            @include mixins.flexBox;
+        }
+        &--name{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 2rem;
+            width: 80%;
+
+            &-image{
+                width: 4rem;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            &-link{
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        &--score{
+            width: 10%;
+            @include mixins.flexBox;
+        }
+   }
+   &__list{
+        &--user{
+            padding: 0.8rem;
+            @include mixins.flexBox;
+            gap: 2rem;
+            font-weight: 600;
+            // background: rgba(map-get(variables.$leaderboardVars, "list"), 1);
+            // color: map-get(variables.$baseVars, "second");
+        }
+   }
+}
