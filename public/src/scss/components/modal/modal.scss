@@ -13,6 +13,7 @@
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 0rem 0.2rem 1rem 0.1rem rgba(map-get(variables.$baseVars, "color"), 0.3);
+    @include animations.popup;
 
     &__title{
         font-size: 180%;

@@ -65,3 +65,17 @@ $colors: green, yellow, grey, purple, red, black;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
 }
+
+@keyframes popup{
+    from{
+        transform: translateY(8%);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@mixin popup{
+    animation-name: popup;
+    animation-duration: 0.4s;
+}

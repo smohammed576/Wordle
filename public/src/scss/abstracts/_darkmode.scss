@@ -1,5 +1,7 @@
 @use "variables";
 
+$colors: grey, yellow, green, purple, red, black;
+
 .darkmode{
     background: map-get(variables.$darkmode, "background");
     color: map-get(variables.$darkmode, "color");
@@ -19,6 +21,10 @@
     }
     & .wordle__row--input{
         border: 0.1rem solid rgba(map-get(variables.$darkmode, "color"), 0.4);
+
+        &-entered{
+            border: 0.1rem solid rgba(map-get(variables.$darkmode, "color"), 0.8);
+        }
     }
     & .user__stats--stat{
         background: rgba(map-get(variables.$darkmode, "statsBackground"), 0.2);
@@ -31,6 +37,16 @@
         }
         &__buttons--replay{
             border-color: map-get(variables.$baseVars, "color");
+        }
+    }
+
+    & .keyboard__key{
+        background: map-get(variables.$darkmode, "keys");
+
+        @each $color in $colors{
+            &--#{$color}{
+                background: map-get(variables.$wordleVars, #{$color});
+            }
         }
     }
 }

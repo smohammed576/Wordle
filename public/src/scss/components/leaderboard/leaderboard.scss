@@ -5,7 +5,6 @@
     @include mixins.flexBox;
     flex-direction: column;
     gap: 2rem;
-    // background: rgba(map-get(variables.$leaderboardVars, "background"), 0.3);
     padding: 1rem 20rem;
     width: 90%;
 
@@ -84,7 +83,6 @@
         list-style: none;
         width: 100%;
         padding: 0.2rem;
-        // background: rgba(map-get(variables.$leaderboardVars, "list"), 1);
         border-radius: 2rem;
    }
    &__user{
@@ -92,7 +90,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // background: rgba(map-get(variables.$leaderboardVars, "background"), 0.4);
         font-size: 110%;
         border-radius: 1rem;
         padding: 0.4rem;
@@ -132,8 +129,6 @@
             @include mixins.flexBox;
             gap: 2rem;
             font-weight: 600;
-            // background: rgba(map-get(variables.$leaderboardVars, "list"), 1);
-            // color: map-get(variables.$baseVars, "second");
         }
    }
 }

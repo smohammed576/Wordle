@@ -186,6 +186,14 @@ body {
     border: none;
   }
 }
+@keyframes popup {
+  from {
+    transform: translateY(8%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .wordle {
   display: flex;
   justify-content: center;
@@ -389,6 +397,8 @@ body {
   justify-content: space-evenly;
   align-items: center;
   box-shadow: 0rem 0.2rem 1rem 0.1rem rgba(0, 0, 0, 0.3);
+  animation-name: popup;
+  animation-duration: 0.4s;
 }
 .modal__title {
   font-size: 180%;
@@ -665,6 +675,9 @@ body {
 .darkmode .wordle__row--input {
   border: 0.1rem solid rgba(255, 255, 255, 0.4);
 }
+.darkmode .wordle__row--input-entered {
+  border: 0.1rem solid rgba(255, 255, 255, 0.8);
+}
 .darkmode .user__stats--stat {
   background: rgba(13, 0, 13, 0.2);
 }
@@ -676,6 +689,27 @@ body {
 }
 .darkmode .modal__buttons--replay {
   border-color: black;
+}
+.darkmode .keyboard__key {
+  background: rgb(65, 59, 72);
+}
+.darkmode .keyboard__key--grey {
+  background: rgb(128, 128, 128);
+}
+.darkmode .keyboard__key--yellow {
+  background: rgb(201, 201, 25);
+}
+.darkmode .keyboard__key--green {
+  background: rgb(43, 98, 43);
+}
+.darkmode .keyboard__key--purple {
+  background: rgb(27, 0, 27);
+}
+.darkmode .keyboard__key--red {
+  background: rgb(77, 5, 5);
+}
+.darkmode .keyboard__key--black {
+  background: black;
 }
 
 /*# sourceMappingURL=style.css.map */
